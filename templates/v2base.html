@@ -16,12 +16,12 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <a href="">Step One: Pick your Base</a>
-            <a href="">Step Two: Select Skills and Languages</a>
-            <a href="">Step Three: Adept Statistics and Choices</a>
-            <a href="">Step Four: Purchase your Abilities</a>
-            <a href="">Step Five: Select your Complications</a>
-            <a href="">Step Six: Design and select your gear</a>
+            <a href="{{ url_for('Character_Creation')}}#Base">Step One: Pick your Base</a>
+            <a href="{{ url_for('Character_Creation')}}#Skills and Language">Step Two: Select Skills and Languages</a>
+            <a href="{{ url_for('Character_Creation')}}#Adept">Step Three: Adept Statistics and Choices</a>
+            <a href="{{ url_for('Character_Creation')}}#Abilities">Step Four: Purchase your Abilities</a>
+            <a href="{{ url_for('Character_Creation')}}#Complications">Step Five: Select your Complications</a>
+            <a href="{{ url_for('Character_Creation')}}#Gear">Step Six: Design and select your gear</a>
         </div>
         </div>
         <div class="dropdown">
@@ -29,9 +29,9 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <a href="">Build Points, Base and Mod</a>
-            <a href="">Activation and Duration</a>
-            <a href="">Building an Ability</a>
+            <a href="{{ url_for('Creating_Abilities')}}#Build Points, Base and Mod">Build Points, Base and Mod</a>
+            <a href="{{ url_for('Creating_Abilities')}}#Activation and Duration">Activation and Duration</a>
+            <a href="{{ url_for('Creating_Abilities')}}#Building an Ability">Building an Ability</a>
             </div>
         </div>
         <div class="dropdown">
@@ -39,10 +39,10 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-            <a href="">Difficulty Class</a>
-            <a href="">Modes of Play</a>
-            <a href="">Hit Points and Wounds</a>
-            <a href="">Defenses</a>
+            <a href="{{ url_for('Core_Game_Rules')}}#DC">Difficulty Class</a>
+            <a href="{{ url_for('Core_Game_Rules')}}#Modes of Play">Modes of Play</a>
+            <a href="{{ url_for('Core_Game_Rules')}}#Hit Points and Wounds">Hit Points and Wounds</a>
+            <a href="{{ url_for('Core_Game_Rules')}}#Defenses">Defenses</a>
         </div>
         </div>
         <div class="dropdown">
@@ -62,7 +62,7 @@
             </div>
         <a href="{{ url_for('Conditions')}}">Conditions</a>
         <a href="{{ url_for('Armor_and_Weapons')}}">Armor and Weapons</a>
-        <a href="">Other Rules</a>
+        <a href="{{ url_for('Other_Rules')}}">Other Rules</a>
         <a href="">V1</a>
     </div>
 <div class ="a main">
