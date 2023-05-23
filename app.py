@@ -38,5 +38,11 @@ def Core_Game_Rules():
 def Character_Creation():
     return render_template("Character_Creation.html")
 
+# V2 Home page
+
+@app.route("/V1_Home")
+def V1_Home():
+    return render_template("V1_Home.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
