@@ -8,6 +8,7 @@ app = Flask(__name__)
 @app.route("/")
 def Home():
     return render_template("Home.html")
+
 # Items in this area are intended for V2
 @app.route("/Conditions")
 def Conditions():
