@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ article.title | safe }}</title>
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="navbar">
+      <a href="{{ url_for('Home')}}">Back to V2</a>
+      <a href="{{ url_for('V1_Home')}}">V1 Home</a>
+      <div class="dropdown">
+      <button class="dropbtn">Spells
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+          <a href="https://unbearable1.pythonanywhere.com/articles/Arcane">Arcane</a>
+          <a href="https://unbearable1.pythonanywhere.com/articles/Divine">Divine</a>
+          <a href="https://unbearable1.pythonanywhere.com/articles/Occult">Occult</a>
+          <a href="https://unbearable1.pythonanywhere.com/articles/Primal">Primal</a>
+      </div>
+      </div>
+      <div class="dropdown">
+      <button class="dropbtn">Class Feats
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="https://unbearable1.pythonanywhere.com/articles/Alchemist">Alchemist</a>
+        <a href="https://unbearable1.pythonanywhere.com/articles/Professional">Professional</a>
+        <a href="https://unbearable1.pythonanywhere.com/articles/Spellcaster">Spellcaster</a>
+        <a href="https://unbearable1.pythonanywhere.com/articles/Warrior">Warrior</a>
+        <a href="https://unbearable1.pythonanywhere.com/articles/WarriorSpellcaster">Warrior / Spellcaster</a>
+      </div>
+      </div>
+      <div class="dropdown">
+      <button class="dropbtn">Secondary Stat Feats
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+          <a href="https://unbearable1.pythonanywhere.com/articles/Perception">Perception</a>
+          <a href="https://unbearable1.pythonanywhere.com/articles/Saving-Throws">Saving Throws</a>
+      </div>
+      </div>
+      <div class="dropdown">
+          <button class="dropbtn">Skill Feats
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+              <a href="https://unbearable1.pythonanywhere.com/articles/All-Knowledge-Skills">All Knowledge Skills</a>
+              <a href="https://unbearable1.pythonanywhere.com/articles/Acrobatics">Acrobatics</a>
+              <a href="https://unbearable1.pythonanywhere.com/articles/Arcana">Arcana</a>
+              <a href="https://unbearable1.pythonanywhere.com/articles/Athletics">Athletics</a>
+              <a href="https://unbearable1.pythonanywhere.com/articles/Crafting">Crafting</a>
+              <a href="https://unbearable1.pythonanywhere.com/articles/Deception">Deception</a>
+              <a href="https://unbearable1.pythonanywhere.com/articles/Diplomacy">Diplomacy</a>
+              <a href="https://unbearable1.pythonanywhere.com/articles/Intimidation">Intimidation</a>
+              <a href="https://unbearable1.pythonanywhere.com/articles/Medicine">Medicine</a>
+              <a href="https://unbearable1.pythonanywhere.com/articles/Nature">Nature</a>
+              <a href="https://unbearable1.pythonanywhere.com/articles/Occultism">Occultism</a>
+              <a href="https://unbearable1.pythonanywhere.com/articles/Performance">Performance</a>
+              <a href="https://unbearable1.pythonanywhere.com/articles/Religion">Religion</a>
+              <a href="https://unbearable1.pythonanywhere.com/articles/Society">Society</a>
+              <a href="https://unbearable1.pythonanywhere.com/articles/Stealth">Stealth</a>
+              <a href="https://unbearable1.pythonanywhere.com/articles/Survival">Survival</a>
+              <a href="https://unbearable1.pythonanywhere.com/articles/Thievery">Thievery</a>
+          </div>
+        </div>
+  </div>
+<div class="sidenav"></div>>
+<div class="a main">
+	{{ article.content | safe }}
+</div>
+<script src="{{url_for('static', filename='dropdown.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V2</title>
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('Home')}}">Home</a>
+        <div class="dropdown">
+        <button class="dropbtn">Character Creation
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="">Step One: Pick your Base</a>
+            <a href="">Step Two: Select Skills and Languages</a>
+            <a href="">Step Three: Adept Statistics and Choices</a>
+            <a href="">Step Four: Purchase your Abilities</a>
+            <a href="">Step Five: Select your Complications</a>
+            <a href="">Step Six: Design and select your gear</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn">Creating Abilities
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="">Build Points, Base and Mod</a>
+            <a href="">Activation and Duration</a>
+            <a href="">Building an Ability</a>
+            </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn">Core Game Rules
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="">Difficulty Class</a>
+            <a href="">Modes of Play</a>
+            <a href="">Hit Points and Wounds</a>
+            <a href="">Defenses</a>
+        </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Actions
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="">Combat Maneuvers</a>
+              <a href="">Tactical Movement</a>
+              <a href="">Social Activities</a>
+              <a href="">Clandestine Actions</a>
+              <a href="">Utility Actions</a>
+              <a href="">Environmental Movement</a>
+              <a href="">Exploration Mode Activities</a>
+              <a href="">Modern Setting Activities</a>
+            </div>
+            </div>
+        <a href="">Conditions</a>
+        <a href="">Armor and Weapons</a>
+        <a href="">Other Rules</a>
+        <a href="">V1</a>
+    </div>
+<div class ="a main">
+    {% block content %}
+    {% endblock %}
+</div>
+<script src="../static/dropdown.js"></script>
+</body>
+</html>
