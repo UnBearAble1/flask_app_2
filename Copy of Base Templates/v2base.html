@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="navbar">
-        <a class ="active" href="{{ url_for('Home')}}">Home</a>
+        <a href="{{ url_for('Home')}}">Home</a>
         <div class="dropdown">
         <button class="dropbtn">Character Creation
           <i class="fa fa-caret-down"></i>
@@ -63,21 +63,12 @@
         <a href="{{ url_for('Conditions')}}">Conditions</a>
         <a href="{{ url_for('Armor_and_Weapons')}}">Armor and Weapons</a>
         <a href="{{ url_for('Other_Rules')}}">Other Rules</a>
-        <a href="{{ url_for('character-creation-guide')}}">THE OLD V1 Stuff!!!!</a>
+        <a href="{{ url_for('V1_Home')}}">V1</a>
     </div>
-<div class="sidenav"></div>
-
-
-<div class="a main">
-<!--solution to pull in image found at https://kanchanardj.medium.com/how-to-add-images-to-html-in-a-flask-app-4dbcc92e3aeb-->
-<img src="{{url_for('static', filename='Laz2.png')}}">
-<h1><center>You can most certainly try!</center></h1>
-<p><center>Pick any of the content above to get started in Laz's V2 adventure!</center></p>
-
-
-
-
+<div class ="a main">
+    {% block content %}
+    {% endblock %}
 </div>
-<script src="{{url_for('static', filename='dropdown.js')}}"></script>
+<script src="../static/dropdown.js"></script>
 </body>
 </html>

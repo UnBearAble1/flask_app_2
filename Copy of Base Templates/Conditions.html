@@ -1,69 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conditions</title>
-    <link rel="stylesheet" href="../static/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-    <div class="navbar">
-        <a href="{{ url_for('Home')}}">Home</a>
-        <div class="dropdown">
-        <button class="dropbtn">Character Creation
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="{{ url_for('Character_Creation')}}#Base">Step One: Pick your Base</a>
-            <a href="{{ url_for('Character_Creation')}}#Skills and Language">Step Two: Select Skills and Languages</a>
-            <a href="{{ url_for('Character_Creation')}}#Adept">Step Three: Adept Statistics and Choices</a>
-            <a href="{{ url_for('Character_Creation')}}#Abilities">Step Four: Purchase your Abilities</a>
-            <a href="{{ url_for('Character_Creation')}}#Complications">Step Five: Select your Complications</a>
-            <a href="{{ url_for('Character_Creation')}}#Gear">Step Six: Design and select your gear</a>
-        </div>
-        </div>
-        <div class="dropdown">
-        <button class="dropbtn">Creating Abilities
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="{{ url_for('Creating_Abilities')}}#Build Points, Base and Mod">Build Points, Base and Mod</a>
-            <a href="{{ url_for('Creating_Abilities')}}#Activation and Duration">Activation and Duration</a>
-            <a href="{{ url_for('Creating_Abilities')}}#Building an Ability">Building an Ability</a>
-          </div>
-        </div>
-        <div class="dropdown">
-        <button class="dropbtn">Core Game Rules
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="{{ url_for('Core_Game_Rules')}}#DC">Difficulty Class</a>
-            <a href="{{ url_for('Core_Game_Rules')}}#Modes of Play">Modes of Play</a>
-            <a href="{{ url_for('Core_Game_Rules')}}#Hit Points and Wounds">Hit Points and Wounds</a>
-            <a href="{{ url_for('Core_Game_Rules')}}#Defenses">Defenses</a>
-        </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Actions
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <a href="{{ url_for('Actions')}}#Combat Maneuvers">Combat Maneuvers</a>
-              <a href="{{ url_for('Actions')}}#Tactical Movement">Tactical Movement</a>
-              <a href="{{ url_for('Actions')}}#Social Activities">Social Activities</a>
-              <a href="{{ url_for('Actions')}}#Clandestine Actions">Clandestine Actions</a>
-              <a href="{{ url_for('Actions')}}#Utility Actions">Utility Actions</a>
-              <a href="{{ url_for('Actions')}}#Environmental Movement">Environmental Movement</a>
-              <a href="{{ url_for('Actions')}}#Exploration Mode Activities">Exploration Mode Activities</a>
-              <a href="{{ url_for('Actions')}}#Modern Setting Activities">Modern Setting Activities</a>
-            </div>
-            </div>
-        <a class = "active" href="{{ url_for('Conditions')}}">Conditions</a>
-        <a href="{{ url_for('Armor_and_Weapons')}}">Armor and Weapons</a>
-        <a href="{{ url_for('Other_Rules')}}">Other Rules</a>
-      </div>
+{% extends 'v2base.html' %}    
+
+
+{% block content %}
 <div class="sidenav">
   <p> List of Conditions</p>
   <a href="#Blinded">Blinded</a>
@@ -105,13 +43,12 @@
 </br>
 </br>
 </div>
-  <div class="a main">
     <h1>Conditions</h1>
     <a name="Blinded">
         <h2 style="padding-top: 48px; margin-top: -48px;">Blinded</h2>
     </a>
     <ul>
-        <li>You can't see. All normal terrain is difficult terrain to you. You can't detect anything using vision. You automatically critically fail Perception checks that require you to be able to see, and if vision is your only precise sense, you take a –4 status penalty to Perception checks. You are immune to visual effects. Blinded overrides dazzled.</li>
+        <li>You can't see. All normal terrain is difficult terrain to you. You can't detect anything using vision. You automatically critically fail Perception checks that require you to be able to see, and if vision is your only precise sense, you take a -4 status penalty to Perception checks. You are immune to visual effects. Blinded overrides dazzled.</li>
         <li>If vision is your only precise sense, that means most creatures are hidden from you:
         </li>
         <ul>
@@ -160,7 +97,7 @@
         <h2 style="padding-top: 48px; margin-top: -48px;">Deafened</h2>
         </a>
         <ul>
-            <li>You can't hear. You automatically critically fail Perception checks that require you to be able to hear. You take a –2 status penalty to Perception checks that involve sound but also rely on other senses. If you perform an action with the auditory trait, you must succeed at a DC 5 flat check or the action is lost; attempt the check after spending the action but before any effects are applied. You are immune to auditory effects</li>
+            <li>You can't hear. You automatically critically fail Perception checks that require you to be able to hear. You take a -2 status penalty to Perception checks that involve sound but also rely on other senses. If you perform an action with the auditory trait, you must succeed at a DC 5 flat check or the action is lost; attempt the check after spending the action but before any effects are applied. You are immune to auditory effects</li>
         </ul>
 
     <a name="Doomed">
@@ -175,8 +112,8 @@
         <h2 style="padding-top: 48px; margin-top: -48px;">Drained</h2>
         </a>
         <ul>
-            <li>You become less healthy. Drained always includes a value. You take a status penalty equal to your drained value on checks requiring physical endurance, such as Fortitude saves. You also lose a number of hit points equal to your Drained value multiplied by 5.  Losing these Hit Points doesn’t count as taking damage.</li>
-            <li>Each time you get a full night’s rest, your drained value decreases by 1. This increases your maximum Hit Points, but you don’t immediately recover the lost Hit Points.</li>
+            <li>You become less healthy. Drained always includes a value. You take a status penalty equal to your drained value on checks requiring physical endurance, such as Fortitude saves. You also lose a number of hit points equal to your Drained value multiplied by 5.  Losing these Hit Points doesn't count as taking damage.</li>
+            <li>Each time you get a full night's rest, your drained value decreases by 1. This increases your maximum Hit Points, but you don't immediately recover the lost Hit Points.</li>
         </ul>
     
     <a name="Encumbered">
@@ -226,7 +163,7 @@
         <h2 style="padding-top: 48px; margin-top: -48px;">Frightened</h2>
         </a>
         <ul>
-            <li>You’re gripped by fear and struggle to control your nerves. The frightened condition always includes a value. You take a status penalty equal to this value to all your checks and DCs. Unless specified otherwise, at the end of each of your turns, the value of your frightened condition decreases by 1.</li>
+            <li>You're gripped by fear and struggle to control your nerves. The frightened condition always includes a value. You take a status penalty equal to this value to all your checks and DCs. Unless specified otherwise, at the end of each of your turns, the value of your frightened condition decreases by 1.</li>
         </ul>
 
           <a name="Grabbed">
@@ -262,14 +199,14 @@
         <h2 style="padding-top: 48px; margin-top: -48px;">Petrified</h2>
         </a>
         <ul>
-            <li>You have been turned to stone. You can’t act, nor can you sense anything. You become an object with a Bulk double your normal Bulk (typically 12 for a petrified Medium creature or 6 for a petrified Small creature), AC 9, Hardness 8, and the same current Hit Points you had when alive. You don’t have a Broken Threshold. When you’re turned back into flesh, you have the same number of Hit Points you had as a statue. If the statue is destroyed, you immediately die. While petrified, your mind and body are in stasis, so you don’t age or notice the passing of time.</li>
+            <li>You have been turned to stone. You can't act, nor can you sense anything. You become an object with a Bulk double your normal Bulk (typically 12 for a petrified Medium creature or 6 for a petrified Small creature), AC 9, Hardness 8, and the same current Hit Points you had when alive. You don’t have a Broken Threshold. When you’re turned back into flesh, you have the same number of Hit Points you had as a statue. If the statue is destroyed, you immediately die. While petrified, your mind and body are in stasis, so you don’t age or notice the passing of time.</li>
         </ul>
 
 <a name="Prone">
     <h2 style="padding-top: 48px; margin-top: -48px;">Prone</h2>
     </a>
     <ul>
-        <li>You're lying on the ground. You are flat-footed and take a –2 circumstance penalty to attack rolls with weapons other than crossbows or firearms. The only move actions you can use while you're prone are Crawl and Stand. Standing up ends the prone condition. You have a +2 circumstance bonus to Guard and Reflex defenses while prone. You can Take Cover while prone to hunker down and gain greater cover against ranged attacks, even if you don't have an object to get behind, gaining a +4 circumstance bonus to AC against ranged attacks (but you remain flat-footed).</li>
+        <li>You're lying on the ground. You are flat-footed and take a -2 circumstance penalty to attack rolls with weapons other than crossbows or firearms. The only move actions you can use while you're prone are Crawl and Stand. Standing up ends the prone condition. You have a +2 circumstance bonus to Guard and Reflex defenses while prone. You can Take Cover while prone to hunker down and gain greater cover against ranged attacks, even if you don't have an object to get behind, gaining a +4 circumstance bonus to AC against ranged attacks (but you remain flat-footed).</li>
         <li>If you would be knocked prone while you're Climbing or Flying, you fall (see Falling for the rules on falling). You can't be knocked prone when Swimming.</li>
     </ul>
 
@@ -339,6 +276,4 @@
 </br>
 </br>
 </br>
-<script src="{{url_for('static', filename='dropdown.js')}}"></script>
-</body>
-</html>
+{% endblock %}

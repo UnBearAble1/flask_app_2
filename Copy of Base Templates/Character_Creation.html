@@ -1,57 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character Creation</title>
-    <link rel="stylesheet" href="../static/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-    <div class="navbar">
-        <a href="{{ url_for('Home')}}">Home</a>
-        <a class="active" href="{{ url_for('Character_Creation')}}#Character Creation">Character Creation</a>
-        <div class="dropdown">
-        <button class="dropbtn">Creating Abilities
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="{{ url_for('Creating_Abilities')}}#Build Points, Base and Mod">Build Points, Base and Mod</a>
-            <a href="{{ url_for('Creating_Abilities')}}#Activation and Duration">Activation and Duration</a>
-            <a href="{{ url_for('Creating_Abilities')}}#Building an Ability">Building an Ability</a>
-          </div>
-        </div>
-        <div class="dropdown">
-        <button class="dropbtn">Core Game Rules
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="{{ url_for('Core_Game_Rules')}}#DC">Difficulty Class</a>
-            <a href="{{ url_for('Core_Game_Rules')}}#Modes of Play">Modes of Play</a>
-            <a href="{{ url_for('Core_Game_Rules')}}#Hit Points and Wounds">Hit Points and Wounds</a>
-            <a href="{{ url_for('Core_Game_Rules')}}#Defenses">Defenses</a>
-        </div>
-        </div>
-        <div class="dropdown">
-        <button class="dropbtn">Actions
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="{{ url_for('Actions')}}#Combat Maneuvers">Combat Maneuvers</a>
-          <a href="{{ url_for('Actions')}}#Tactical Movement">Tactical Movement</a>
-          <a href="{{ url_for('Actions')}}#Social Activities">Social Activities</a>
-          <a href="{{ url_for('Actions')}}#Clandestine Actions">Clandestine Actions</a>
-          <a href="{{ url_for('Actions')}}#Utility Actions">Utility Actions</a>
-          <a href="{{ url_for('Actions')}}#Environmental Movement">Environmental Movement</a>
-          <a href="{{ url_for('Actions')}}#Exploration Mode Activities">Exploration Mode Activities</a>
-          <a href="{{ url_for('Actions')}}#Modern Setting Activities">Modern Setting Activities</a>
-        </div>
-        </div>
-        <a href="{{ url_for('Conditions')}}">Conditions</a>
-        <a href="{{ url_for('Armor_and_Weapons')}}">Armor and Weapons</a>
-        <a href="{{ url_for('Other_Rules')}}">Other Rules</a>
-    </div>
+{% extends 'v2base.html' %}    
+
+
+{% block content %}
 <div class="sidenav">
     <p>Character Creation</p>
   <a href="#">Top of Page</a>
@@ -107,8 +57,6 @@
 </br>
 </br>
 </div>
-
-<div class="a main">
 <h1>Character Creation</h1>
 <p>Before making your character, it is good to understand what this game is and is not, especially since the game is largely based on popular fantasy games where a few of these things may not be true:</p>
 <ol>
@@ -512,6 +460,4 @@
 </br>
 </br>
 </div>
-<script src="{{url_for('static', filename='dropdown.js')}}"></script>
-</body>
-</html> 
+{% endblock %}

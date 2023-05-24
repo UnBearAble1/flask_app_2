@@ -1,0 +1,11 @@
+{% extends 'v2base.html' %}    
+
+
+{% block content %}
+<div class="sidenav"></div>
+<div class="a main">
+<!--solution to pull in image found at https://kanchanardj.medium.com/how-to-add-images-to-html-in-a-flask-app-4dbcc92e3aeb-->
+<img src="{{url_for('static', filename='Laz2.png')}}">
+<h1><center>You can most certainly try!</center></h1>
+<p><center>Pick any of the content above to get started in Laz's V2 adventure!</center></p>
+{% endblock %}
